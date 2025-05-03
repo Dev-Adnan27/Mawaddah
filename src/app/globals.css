@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #6A9D96ff;
+    --bghover: rgb(52, 85, 83);
+    --col1: #DCB36Fff;
+    --col2: #F5D7A1ff;
+    --text: rgb(121, 121, 121);
+}
+
+a {
+    color: rgb(88, 160, 255);
+}
+p, span, div{
+    color: var(--text);
+}
+
+*{
+    transition: .3s;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+/* Custom Scrollbar for Chat Sidebar */
+.ChatSidebar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #4a5568 #2d3748; /* Thumb and Track color */
+}
+
+/* Webkit browsers (Chrome, Edge, Safari) */
+.ChatSidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ChatSidebar::-webkit-scrollbar-track {
+  background: #2d3748; /* Dark background */
+  border-radius: 10px;
+}
+
+.ChatSidebar::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Gray thumb */
+  border-radius: 10px;
+  border: 2px solid #2d3748;
+}
+
+.ChatSidebar::-webkit-scrollbar-thumb:hover {
+  background: #718096; /* Lighter gray on hover */
+}

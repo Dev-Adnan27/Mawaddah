@@ -12,7 +12,7 @@ export default function AboutPage() {
   <div className="bg-black bg-opacity-60 p-10 rounded-lg text-center">
     <h1 className="text-5xl font-bold text-white mb-4">About Mawaddah</h1>
     <p className="text-white text-lg max-w-2xl">
-      We are a matchmaking platform built on trust, verification, and the genuine intention of helping people find real love and life partners.
+    We understand that weddings are more than just events — they are lifelong memories. That’s why we provide a seamless platform where families and couples can book everything they need for a perfect marriage ceremony, all in one place.
     </p>
   </div>
 </section>
@@ -47,13 +47,16 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-xl shadow-md">
               <h3 className="text-2xl font-semibold text-blue-600 mb-4">Mission</h3>
               <p className="text-gray-700 text-lg">
-                To connect people who are looking for commitment and real relationships by offering a trusted, safe, and respectful platform.
+               ur mission is to simplify and modernize the process of planning weddings by offering a trusted, all-in-one platform for booking essential marriage services — from venues and Molvis to stage decor, catering, and more.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-md">
               <h3 className="text-2xl font-semibold text-blue-600 mb-4">Vision</h3>
               <p className="text-gray-700 text-lg">
-                We aim to redefine modern matchmaking by combining technology with transparency, and building a global community of respectful individuals.
+               We aim to support families and couples in organizing meaningful, memorable, and well-managed wedding events with professionalism, transparency, and convenience.
+
+
+
               </p>
             </div>
           </div>

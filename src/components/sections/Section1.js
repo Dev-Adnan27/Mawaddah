@@ -8,23 +8,23 @@ import { TbStarsFilled } from "react-icons/tb";
 
 const items = [
     {
-        name: 'Mulvi',
+        name: '',
         icon: <FaUsers />
     },
     {
-        name: '300,000 Marriages',
+        name: '',
         icon: <GiLinkedRings />
     },
     {
-        name: '360 Hafiz',
+        name: '',
         icon: <FaHandsHelping />
     },
     {
-        name: '2 Billion+ Matches',
+        name: '',
         icon: <IoIosChatbubbles />
     },
     {
-        name: '100 Countries',
+        name: '',
         icon: <FaGlobeAmericas />
     },
     {

@@ -8,23 +8,23 @@ import { TbStarsFilled } from "react-icons/tb";
 
 const items = [
     {
-        name: '',
+        name: 'Faith. Support. Connection.',
         icon: <FaUsers />
     },
     {
-        name: '',
+        name: 'Strengthening Relationships, Enriching Souls',
         icon: <GiLinkedRings />
     },
     {
-        name: '',
+        name: 'Guidance with Heart',
         icon: <FaHandsHelping />
     },
     {
-        name: '',
+        name: 'Islamic Guidance',
         icon: <IoIosChatbubbles />
     },
     {
-        name: '',
+        name: 'Inspiring Youth',
         icon: <FaGlobeAmericas />
     },
     {

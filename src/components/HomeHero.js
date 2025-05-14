@@ -20,11 +20,11 @@ const HeroSection = () => {
           In the name of Allah, the creator of the universe
         </h1>
         <p className="mt-2 max-w-2xl text-lg text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Welcome to Mawaddah – your trusted platform for meaningful connections and memorable celebrations.
         </p>
         <Link href="/findpartner">
           <button className="mt-4 px-6 py-2 bg-blue-500  text-white rounded-full text-lg">
-            Discover More
+            
           </button>
         </Link>
       </div>

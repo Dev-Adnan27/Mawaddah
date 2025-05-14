@@ -11,8 +11,10 @@ const HeroSection = () => {
   alt="Hero Background"
   layout="fill"
   objectFit="cover"
-  className="opacity-50"
+  priority
+  className=""
 />
+
 
       
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-5">

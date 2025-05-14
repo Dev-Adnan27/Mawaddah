@@ -112,7 +112,7 @@ const fallbackServices = [
     icon: "FaSchool",
     title: "School Holiday Programs",
     description: "Fun, skill-building activities during holidays with a safe, faith-based environment for children.",
-    coverImage: "/her3.jpg"
+    coverImage: "/school.webp"
   },
   {
     slug: "premium-tuition-for-primary-secondary-students",

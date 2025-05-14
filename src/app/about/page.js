@@ -1,100 +1,172 @@
-import { FaHeart, FaShieldAlt, FaUsers } from "react-icons/fa";
+import Link from "next/link";
+import {
+  FaMosque,
+  FaHandsHelping,
+  FaBalanceScale,
+  FaGavel,
+  FaUtensils,
+  FaChild,
+  FaPodcast,
+  FaUsers,
+  FaSchool,
+} from "react-icons/fa";
+import ServiceImage from '../../components/ServiceImage';
 
-export default function AboutPage() {
+// Get icon component by name
+const getIconComponent = (iconName) => {
+  const icons = {
+    FaMosque,
+    FaHandsHelping,
+    FaBalanceScale,
+    FaGavel,
+    FaUtensils,
+    FaChild,
+    FaPodcast,
+    FaUsers,
+    FaSchool,
+  };
+  return icons[iconName] || FaMosque; // Default to FaMosque if icon not found
+};
+
+// Fetching services from the API
+async function getServices() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ""}/api/services`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      console.error("Failed to fetch services from API");
+      return [];
+    }
+
+    const data = await res.json();
+    console.log("✅ SERVICES DATA FROM DATABASE:", data);
+    return data.services || [];
+  } catch (error) {
+    console.error("Error fetching services:", error);
+    return [];
+  }
+}
+
+// Fallback services data (used if API fails)
+const fallbackServices = [
+  {
+    slug: "islamic-marriage-celebrant",
+    icon: "FaMosque",
+    title: "Islamic Marriage Celebrant",
+    description: "Nikah ceremonies aligned with Islamic values and legal requirements, including registration services.",
+    coverImage: "/islamic.jpg"
+  },
+  {
+    slug: "marriage-counselling",
+    icon: "FaHandsHelping",
+    title: "Marriage Counselling",
+    description: "Faith-based and modern guidance for couples to strengthen their relationship and resolve conflicts.",
+    coverImage: "/marriage-counselling.jpg"
+  },
+  {
+    slug: "marriage-conflict-resolution",
+    icon: "FaBalanceScale",
+    title: "Marriage Conflict Resolution",
+    description: "Islamic and modern conflict resolution to restore harmony and understanding in relationships.",
+    coverImage: "/marriage.avif"
+  },
+  {
+    slug: "marriage-arbitration-committee",
+    icon: "FaGavel",
+    title: "Marriage Arbitration Committee",
+    description: "Structured mediation rooted in Islamic ethics to resolve disputes fairly and respectfully.",
+    coverImage: "/hero1.jpg"
+  },
+  {
+    slug: "marriage-functions-venue-catering",
+    icon: "FaUtensils",
+    title: "Marriage Functions – Venue & Catering",
+    description: "Elegant venue hire and halal catering for Nikah and wedding celebrations, professionally coordinated.",
+    coverImage: "/mosque.jpg"
+  },
+  {
+    slug: "youth-children-counselling",
+    icon: "FaChild",
+    title: "Youth & Children Counselling",
+    description: "Supportive counselling for young individuals to build resilience and emotional well-being with Islamic values.",
+    coverImage: "/marriage-counselling.jpg"
+  },
+  {
+    slug: "islamic-talks-podcasts",
+    icon: "FaPodcast",
+    title: "Islamic Talks & Podcasts",
+    description: "Inspirational talks and podcasts covering faith, personal development, and community well-being.",
+    coverImage: "/arbitration.jpg"
+  },
+  {
+    slug: "group-counselling-mentoring",
+    icon: "FaUsers",
+    title: "Group Counselling & Mentoring",
+    description: "Group support rooted in Islamic guidance, fostering growth through shared experiences.",
+    coverImage: "/islamic.jpg"
+  },
+  {
+    slug: "school-holiday-programs",
+    icon: "FaSchool",
+    title: "School Holiday Programs",
+    description: "Fun, skill-building activities during holidays with a safe, faith-based environment for children.",
+    coverImage: "/her3.jpg"
+  },
+  {
+    slug: "premium-tuition-for-primary-secondary-students",
+    icon: "FaSchool",
+    title: "Premium Tuition for Primary & Secondary Students",
+    description: "High-quality tuition for Years 1-12, including HSC, VCE, QCS, and Selective School preparation.",
+    coverImage: "/tuition.jpg"
+  },
+];
+
+export default async function OurServices() {
+  const apiServices = await getServices();
+  console.log("🚀 Services from API:", JSON.stringify(apiServices, null, 2));
+
+  const services = apiServices.length > 0 ? apiServices : fallbackServices;
+
+  if (apiServices.length > 0) {
+    console.log("✅ Services received from API:", apiServices.length);
+    console.log("Sample service coverImage:", apiServices[0]?.coverImage ? "Present" : "Missing");
+  } else {
+    console.log("⚠️ USING FALLBACK STATIC SERVICES DATA");
+  }
+
   return (
-    <div className="bg-white text-gray-800">
-      {/* Hero Section */}
-{/* Hero Section */}
-<section
-  className="w-full h-[600px] bg-cover bg-center flex items-center justify-center"
-  style={{ backgroundImage: "url('/mosque.jpg')" }}
->
-  <div className="bg-black bg-opacity-60 p-10 rounded-lg text-center">
-    <h1 className="text-5xl font-bold text-white mb-4">About Mawaddah</h1>
-    <p className="text-white text-lg max-w-2xl">
-   We understand that weddings are more than just events — they are lifelong memories. That’s why we provide a seamless platform where families and couples can book everything they need for a perfect marriage ceremony, all in one place.
-    </p>
-  </div>
-</section>
-
-
-
-
-      {/* Story Section */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img
-              src="/aboutus.jpg"
-              alt="Our Story"
-              className="w-full rounded-xl shadow-lg"
-            />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">Our Story</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              Our journey began with a deep commitment to nurturing families, strengthening relationships, and guiding the community with care and compassion. As qualified marriage celebrants and counsellors, we not only officiate beautiful and meaningful marriage functions, but also support couples through ongoing marriage counselling and a dedicated marriage arbitration committee to help resolve conflicts peacefully. Our services extend to youth and children’s counselling, group counselling sessions, and personalised mentoring programs that empower individuals at every stage of life. We also run engaging school holiday programs designed to support children's emotional and spiritual growth. Through our Islamic talks and podcasts, we share valuable insights and guidance rooted in faith, aiming to inspire, educate, and uplift. Our mission is to walk alongside families and individuals as they build stronger, healthier, and more spiritually grounded lives.
-
-            </p>
-          </div>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold text-gray-900 mt-8 mb-12 relative z-10">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => {
+            const IconComponent = getIconComponent(service.icon);
+            return (
+              <Link href={`/services/${service.slug}`} key={index}>
+                <div className="p-6 text-center bg-white shadow-lg rounded-lg border border-gray-200 hover:shadow-xl transition duration-300 cursor-pointer h-full flex flex-col">
+                  {service.coverImage ? (
+                    <div className="mb-4 w-full h-40 relative rounded-md overflow-hidden">
+                      <ServiceImage src={service.coverImage} alt={service.title} slug={service.slug} />
+                    </div>
+                  ) : (
+                    <div className="text-blue-600 text-5xl mb-4">
+                      <IconComponent />
+                    </div>
+                  )}
+                  <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="bg-gray-100 py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-blue-700 mb-12">Our Mission & Vision</h2>
-          <div className="grid md:grid-cols-2 gap-10 text-left">
-            <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-semibold text-blue-600 mb-4">Mission</h3>
-              <p className="text-gray-700 text-lg">
-               To empower individuals, couples, and families through meaningful marriage services, compassionate counselling, and faith-based guidance. We aim to foster healthy relationships, nurture personal growth, and strengthen our community through marriage functions, arbitration, youth and children’s counselling, group mentoring, school holiday programs, and inspiring Islamic talks and podcasts.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-semibold text-blue-600 mb-4">Vision</h3>
-              <p className="text-gray-700 text-lg">
-               To be a leading centre for relationship enrichment and community wellbeing, where every individual feels supported, every couple is guided with wisdom, and every family thrives through faith, connection, and care. We envision a future where strong, spiritually grounded relationships form the foundation of a resilient and compassionate society.
-
-
-
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-20 px-4 max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-blue-700 mb-12">Our Core Values</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white shadow-lg p-8 rounded-xl">
-            <FaHeart className="text-blue-600 text-5xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-blue-700 mb-2">Genuineness</h4>
-            <p className="text-gray-600">
-              Growing Together with Care, Strength, and Spiritual Guidance
-
-
-            </p>
-          </div>
-          <div className="bg-white shadow-lg p-8 rounded-xl">
-            <FaShieldAlt className="text-blue-600 text-5xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-blue-700 mb-2">Security</h4>
-            <p className="text-gray-600">
-              Your Path to Secure, Faith-Filled Growth
-            </p>
-          </div>
-          <div className="bg-white shadow-lg p-8 rounded-xl">
-            <FaUsers className="text-blue-600 text-5xl mb-4 mx-auto" />
-            <h4 className="text-xl font-semibold text-blue-700 mb-2">Community</h4>
-            <p className="text-gray-600">
-        Strong Communities, Stronger Families — Together We Thrive
-
-
-                        </p>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

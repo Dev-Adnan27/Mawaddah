@@ -3,12 +3,12 @@ import React from "react";
 const testimonials = [
   {
     name: "Ahmed Khan",
-    text: "This platform helped me find the perfect match. The experience was amazing!",
+    text: "The school holiday program gave my kids a chance to learn about Islam in a fun and meaningful way. They can’t wait to go back!",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
     name: "Fatima Ali",
-    text: "The matchmaking service is excellent. I found a partner who shares my values.",
+    text: "We were struggling, and didn’t know where to turn. The marriage arbitration process at Mawaddah was fair, respectful, and rooted in Islamic principles.",
     image: "https://randomuser.me/api/portraits/women/45.jpg",
   },
   {

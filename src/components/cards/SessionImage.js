@@ -5,11 +5,9 @@ const ThirdSection = () => {
           
           {/* Right Image - Pehle Image Left */}
           <div className="relative">
-            <img src="/hero2.jpg" alt="Quran" className="w-full h-auto rounded-lg shadow-lg" />
-            <div className="absolute top-4 left-4 bg-white p-2 rounded-lg shadow-md opacity-75">
-              <img src="/images/quran-frame.png" alt="Frame" className="w-16 h-16" />
-            </div>
-          </div>
+  <img src="/hero2.jpg" alt="Quran" className="w-full h-auto rounded-lg shadow-lg" />
+</div>
+
   
           {/* Left Content - Abhi Text Right */}
           <div>

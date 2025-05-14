@@ -9,8 +9,9 @@ const AboutIslam = () => {
                 <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
                     <h2 className="text-3xl font-bold text-[#123a6d]">Get to Know More About Islam</h2>
                     <p className="text-gray-700 mt-4 max-w-lg">
-                        Odio potenti senara tortor nisi eu. Faucibus torquent nam augue diam nisl metus habitant
-                        tempor. Purus augue necpos itoers nisl torcis facilisi netus acs sociis.
+                        Inspired by the Islamic values of love, mercy, and compassion, Mawaddah is dedicated to supporting individuals and families through every stage of life.
+
+As qualified marriage celebrants and counsellors, we serve the community by conducting Nikah (Islamic marriage ceremonies), offering faith-based marriage counselling, and helping couples resolve conflicts through Sharia-compliant arbitration.
                     </p>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
                         <button className="px-6 py-3 bg-[#123a6d] text-white rounded-md shadow-md hover:bg-[#1A252F] transition">

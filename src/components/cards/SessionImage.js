@@ -15,14 +15,12 @@ const ThirdSection = () => {
           <div>
             <h2 className="text-3xl font-bold text-[#123a6d] mb-4">Mission Statement</h2>
             <p className="text-gray-700 mb-4">
-              Sit suspendisse felis fermentum proin habitant non. Duis metus commodo et nibh ad 
-              quam etiam facilisi id sem metus. Cubilia egestas felis habitasse imperdiet netus 
-              tempor ad metus.
+             To empower individuals, couples, and families through meaningful marriage services, compassionate counselling, and faith-based guidance. We aim to foster healthy relationships, nurture personal growth, and strengthen our community through marriage functions, arbitration, youth and children’s counselling, group mentoring, school holiday programs, and inspiring Islamic talks and podcasts.
             </p>
             <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li>Pede cubilia consequat posuere justo purus cursus.</li>
-              <li>Convallis ut interdum dictum libero habitasse ullamcorper lorem.</li>
-              <li>Non commodo conubia ipsum phasellus habitasse.</li>
+              <li>Support healthy relationships through compassionate counselling and guidance.</li>
+              <li>Deliver youth and children's counselling to nurture emotional and spiritual development.</li>
+              <li>Run school holiday programs that engage, educate, and inspire young minds.</li>
             </ul>
             <button className="mt-6 bg-[#123a6d] text-white px-6 py-3 rounded-md shadow-md hover:bg-orange-600 transition">
               More Info

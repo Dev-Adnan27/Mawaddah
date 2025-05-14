@@ -67,7 +67,7 @@ const fallbackServices = [
     title: "Marriage Counselling",
     description:
       "Faith-based and modern guidance for couples to strengthen their relationship and resolve conflicts.",
-    coverImage: "/services/marriage-counselling.jpg"
+    coverImage: "/marriage-counselling.jpg"
   },
   {
     slug: "marriage-conflict-resolution",
@@ -75,7 +75,7 @@ const fallbackServices = [
     title: "Marriage Conflict Resolution",
     description:
       "Islamic and modern conflict resolution to restore harmony and understanding in relationships.",
-    coverImage: "/services/marriage-conflict-resolution.jpg"
+    coverImage: "/marriage.avif"
   },
   {
     slug: "marriage-arbitration-committee",
@@ -83,7 +83,7 @@ const fallbackServices = [
     title: "Marriage Arbitration Committee",
     description:
       "Structured mediation rooted in Islamic ethics to resolve disputes fairly and respectfully.",
-    coverImage: "/services/marriage-arbitration-committee.jpg"
+    coverImage: "/hero1.jpg"
   },
   {
     slug: "marriage-functions-venue-catering",
@@ -91,7 +91,7 @@ const fallbackServices = [
     title: "Marriage Functions – Venue & Catering",
     description:
       "Elegant venue hire and halal catering for Nikah and wedding celebrations, professionally coordinated.",
-    coverImage: "/services/marriage-functions-venue-catering.jpg"
+    coverImage: "/mosque.jpg"
   },
   {
     slug: "youth-children-counselling",
@@ -99,7 +99,7 @@ const fallbackServices = [
     title: "Youth & Children Counselling",
     description:
       "Supportive counselling for young individuals to build resilience and emotional well-being with Islamic values.",
-    coverImage: "/services/youth-children-counselling.jpg"
+    coverImage: "/marriage-counselling.jpg"
   },
   {
     slug: "islamic-talks-podcasts",
@@ -107,7 +107,7 @@ const fallbackServices = [
     title: "Islamic Talks & Podcasts",
     description:
       "Inspirational talks and podcasts covering faith, personal development, and community well-being.",
-    coverImage: "/services/islamic-talks-podcasts.jpg"
+    coverImage: "/arbitration.jpg"
   },
   {
     slug: "group-counselling-mentoring",
@@ -115,7 +115,7 @@ const fallbackServices = [
     title: "Group Counselling & Mentoring",
     description:
       "Group support rooted in Islamic guidance, fostering growth through shared experiences.",
-    coverImage: "/services/group-counselling-mentoring.jpg"
+    coverImage: "/islamic.jpg"
   },
   {
     slug: "school-holiday-programs",
@@ -123,7 +123,7 @@ const fallbackServices = [
     title: "School Holiday Programs",
     description:
       "Fun, skill-building activities during holidays with a safe, faith-based environment for children.",
-    coverImage: "/services/school-holiday-programs.jpg"
+    coverImage: "/her3.jpg"
   },
   {
     slug: "premium-tuition-for-primary-secondary-students",

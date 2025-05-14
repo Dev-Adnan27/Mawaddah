@@ -72,22 +72,26 @@ export default function AboutPage() {
             <FaHeart className="text-blue-600 text-5xl mb-4 mx-auto" />
             <h4 className="text-xl font-semibold text-blue-700 mb-2">Genuineness</h4>
             <p className="text-gray-600">
-              We believe in real connections and honest intentions — no games, no fakes.
+              Growing Together with Care, Strength, and Spiritual Guidance
+
+
             </p>
           </div>
           <div className="bg-white shadow-lg p-8 rounded-xl">
             <FaShieldAlt className="text-blue-600 text-5xl mb-4 mx-auto" />
             <h4 className="text-xl font-semibold text-blue-700 mb-2">Security</h4>
             <p className="text-gray-600">
-              Your data and identity are protected with top-notch encryption and moderation.
+              Your Path to Secure, Faith-Filled Growth
             </p>
           </div>
           <div className="bg-white shadow-lg p-8 rounded-xl">
             <FaUsers className="text-blue-600 text-5xl mb-4 mx-auto" />
             <h4 className="text-xl font-semibold text-blue-700 mb-2">Community</h4>
             <p className="text-gray-600">
-              Mawaddah is more than an app — it’s a respectful space for serious people.
-            </p>
+        Strong Communities, Stronger Families — Together We Thrive
+
+
+                        </p>
           </div>
         </div>
       </section>

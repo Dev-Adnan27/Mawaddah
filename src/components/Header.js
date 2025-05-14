@@ -55,8 +55,7 @@ const Header = () => {
 
                
                 <div className="iconsNav flex items-center gap-3 md:gap-6 text-2xl">
-                    <Link className='text-gray-700 cursor-pointer' href={'/user/following'}><FaRegHeart /></Link>
-                    <Link className='text-gray-700 cursor-pointer' href={'/user/chat'}><FiMessageCircle /></Link>
+                    
                     <UserMenu />
 
                     

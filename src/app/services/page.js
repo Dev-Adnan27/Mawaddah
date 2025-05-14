@@ -32,18 +32,16 @@ const getIconComponent = (iconName) => {
 async function getServices() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ""}/api/services`, {
-      cache: "no-store", // Don't cache this data
+      cache: "no-store",
     });
-    
+
     if (!res.ok) {
-      // If the API call fails, return the fallback data
       console.error("Failed to fetch services from API");
       return [];
     }
-    
+
     const data = await res.json();
     console.log("✅ SERVICES DATA FROM DATABASE:", data);
-    // Check if data has services property (new API format)
     return data.services || [];
   } catch (error) {
     console.error("Error fetching services:", error);
@@ -57,96 +55,87 @@ const fallbackServices = [
     slug: "islamic-marriage-celebrant",
     icon: "FaMosque",
     title: "Islamic Marriage Celebrant",
-    description:
-      "Nikah ceremonies aligned with Islamic values and legal requirements, including registration services.",
+    description: "Nikah ceremonies aligned with Islamic values and legal requirements, including registration services.",
     coverImage: "/islamic.jpg"
   },
   {
     slug: "marriage-counselling",
     icon: "FaHandsHelping",
     title: "Marriage Counselling",
-    description:
-      "Faith-based and modern guidance for couples to strengthen their relationship and resolve conflicts.",
+    description: "Faith-based and modern guidance for couples to strengthen their relationship and resolve conflicts.",
     coverImage: "/marriage-counselling.jpg"
   },
   {
     slug: "marriage-conflict-resolution",
     icon: "FaBalanceScale",
     title: "Marriage Conflict Resolution",
-    description:
-      "Islamic and modern conflict resolution to restore harmony and understanding in relationships.",
+    description: "Islamic and modern conflict resolution to restore harmony and understanding in relationships.",
     coverImage: "/marriage.avif"
   },
   {
     slug: "marriage-arbitration-committee",
     icon: "FaGavel",
     title: "Marriage Arbitration Committee",
-    description:
-      "Structured mediation rooted in Islamic ethics to resolve disputes fairly and respectfully.",
+    description: "Structured mediation rooted in Islamic ethics to resolve disputes fairly and respectfully.",
     coverImage: "/hero1.jpg"
   },
   {
     slug: "marriage-functions-venue-catering",
     icon: "FaUtensils",
     title: "Marriage Functions – Venue & Catering",
-    description:
-      "Elegant venue hire and halal catering for Nikah and wedding celebrations, professionally coordinated.",
+    description: "Elegant venue hire and halal catering for Nikah and wedding celebrations, professionally coordinated.",
     coverImage: "/mosque.jpg"
   },
   {
     slug: "youth-children-counselling",
     icon: "FaChild",
     title: "Youth & Children Counselling",
-    description:
-      "Supportive counselling for young individuals to build resilience and emotional well-being with Islamic values.",
+    description: "Supportive counselling for young individuals to build resilience and emotional well-being with Islamic values.",
     coverImage: "/marriage-counselling.jpg"
   },
   {
     slug: "islamic-talks-podcasts",
     icon: "FaPodcast",
     title: "Islamic Talks & Podcasts",
-    description:
-      "Inspirational talks and podcasts covering faith, personal development, and community well-being.",
+    description: "Inspirational talks and podcasts covering faith, personal development, and community well-being.",
     coverImage: "/arbitration.jpg"
   },
   {
     slug: "group-counselling-mentoring",
     icon: "FaUsers",
     title: "Group Counselling & Mentoring",
-    description:
-      "Group support rooted in Islamic guidance, fostering growth through shared experiences.",
+    description: "Group support rooted in Islamic guidance, fostering growth through shared experiences.",
     coverImage: "/islamic.jpg"
   },
   {
     slug: "school-holiday-programs",
     icon: "FaSchool",
     title: "School Holiday Programs",
-    description:
-      "Fun, skill-building activities during holidays with a safe, faith-based environment for children.",
+    description: "Fun, skill-building activities during holidays with a safe, faith-based environment for children.",
     coverImage: "/her3.jpg"
   },
   {
     slug: "premium-tuition-for-primary-secondary-students",
     icon: "FaSchool",
     title: "Premium Tuition for Primary & Secondary Students",
-    description:
-      "High-quality tuition for Years 1-12, including HSC, VCE, QCS, and Selective School preparation.",
+    description: "High-quality tuition for Years 1-12, including HSC, VCE, QCS, and Selective School preparation.",
     coverImage: "/tuition.jpg"
   },
 ];
 
 export default async function OurServices() {
-  // Try to fetch services from API, fallback to static data if needed
   const apiServices = await getServices();
+  console.log("🚀 Services from API:", JSON.stringify(apiServices, null, 2));
+
   const services = apiServices.length > 0 ? apiServices : fallbackServices;
-  
+
   if (apiServices.length > 0) {
     console.log("✅ Services received from API:", apiServices.length);
     console.log("Sample service coverImage:", apiServices[0]?.coverImage ? "Present" : "Missing");
   } else {
     console.log("⚠️ USING FALLBACK STATIC SERVICES DATA");
   }
-  
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto text-center">

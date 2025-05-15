@@ -12,7 +12,7 @@ export default function AboutPage() {
   <div className="bg-black bg-opacity-60 p-10 rounded-lg text-center">
     <h1 className="text-5xl font-bold text-white mb-4">About Mawaddah</h1>
     <p className="text-white text-lg max-w-2xl">
-      We are a matchmaking platform built on trust, verification, and the genuine intention of helping people find real love and life partners.
+      We understand that weddings are more than just events — they are lifelong memories. That’s why we provide a seamless platform where families and couples can book everything they need for a perfect marriage ceremony, all in one place.
     </p>
   </div>
 </section>

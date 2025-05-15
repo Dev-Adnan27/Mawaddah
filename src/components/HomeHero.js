@@ -25,7 +25,7 @@ const HeroSection = () => {
         Welcome to Mawaddah – your trusted platform for meaningful connections and memorable celebrations.
         </p>
         
-        </Link>
+        
       </div>
     </div>
   );

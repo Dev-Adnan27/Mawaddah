@@ -8,7 +8,7 @@ import { TbStarsFilled } from "react-icons/tb";
 
 const items = [
     {
-        name: 'Faith. Support. Connection.',
+        name: 'Faith Support. Connection.',
         icon: <FaUsers />
     },
     {

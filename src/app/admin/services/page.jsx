@@ -374,7 +374,7 @@ export default function ServicesManagement() {
                           <img 
                             src={service.coverImage} 
                             alt={service.title} 
-                            className="h-12 w-12 object-cover rounded-md"
+                            className="h-20 w-12 object-cover rounded-md"
                           />
                         ) : (
                           <div className="h-12 w-12 bg-gray-200 flex items-center justify-center rounded-md">
